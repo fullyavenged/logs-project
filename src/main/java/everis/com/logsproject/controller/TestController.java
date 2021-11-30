@@ -15,8 +15,8 @@ public class TestController {
 
 	@GetMapping("/")
 	public ResponseEntity<String> saludo(){
-		logger.info("Hola");
-		return new ResponseEntity<String>(HttpStatus.OK);
+		logger.info("Llamada al endpoint inicial");
+		return new ResponseEntity<String>(HttpStatus.OK).ok("Hola");
 	}
 	
 }
